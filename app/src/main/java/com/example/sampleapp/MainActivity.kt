@@ -9,20 +9,15 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.mediapp.interactions.data.remote.BarcodeResolver
 import com.mediapp.interactions.ui.screens.AjoutMedicamentScreen
 import com.mediapp.interactions.ui.screens.HomeScreen
 import com.mediapp.interactions.ui.screens.ScannerScreen
 import com.mediapp.interactions.ui.theme.MediAppTheme
 import com.mediapp.interactions.ui.viewmodel.MedicamentViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-
-    @Inject
-    lateinit var barcodeResolver: BarcodeResolver
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +36,6 @@ class MainActivity : ComponentActivity() {
                         }
                         composable("ajout") { entry ->
                             AjoutMedicamentScreen(
-                                barcodeResolver = barcodeResolver,
                                 backStackEntry = entry,
                                 onNavigateToScanner = { navController.navigate("scanner") },
                                 onNavigateBack = { navController.popBackStack() },
