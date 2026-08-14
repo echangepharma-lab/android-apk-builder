@@ -8,6 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+
 import androidx.navigation.compose.rememberNavController
 import com.mediapp.interactions.data.remote.BarcodeResolver
 import com.mediapp.interactions.ui.screens.AjoutMedicamentScreen
