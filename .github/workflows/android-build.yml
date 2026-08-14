@@ -20,14 +20,23 @@ jobs:
 
       - name: Installer Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          cmdline-tools-version: 11076708
+          packages: 'platforms;android-34 build-tools;34.0.0 platform-tools'
+
+      - name: Accepter les licences Android
+        run: yes | sdkmanager --licenses || true
+
+      - name: Créer local.properties
+        run: echo "sdk.dir=$ANDROID_HOME" > local.properties
 
       - name: Installer Gradle
         uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: 8.5
 
-      - name: Compiler l'APK
-        run: gradle assembleDebug
+      - name: Compiler l'APK Debug
+        run: gradle assembleDebug --stacktrace
 
       - name: Uploader l'APK
         uses: actions/upload-artifact@v4
