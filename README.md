@@ -34,7 +34,7 @@ A complete Android project template that demonstrates how to build APK files usi
 - **GitHub Account** - [Sign up free](https://github.com)
 
 ### ✅ What You DON'T Need
-- ❌ Android Studio(
+- ❌ Android Studio
 - ❌ Android SDK
 - ❌ Java/Kotlin installation
 - ❌ Gradle installation
