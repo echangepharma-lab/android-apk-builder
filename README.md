@@ -33,6 +33,7 @@ A complete Android project template that demonstrates how to build APK files usi
 - **Web Browser** - Chrome, Firefox, Edge, etc.
 - **GitHub Account** - [Sign up free](https://github.com)
 
+
 ### ✅ What You DON'T Need
 - ❌ Android Studio
 - ❌ Android SDK
