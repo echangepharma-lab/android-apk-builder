@@ -12,6 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
-rootProject.name = "MediApp Interactions"
+rootProject.name = "ChatWorld"
 include(":app")
